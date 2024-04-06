@@ -24,4 +24,11 @@ app.get("/v2", async (req, res) => {
     })
 })
 
+app.get("/v3", async (req, res) => {
+    fibonacci(40)
+    res.json({
+        message: "Hello world v3"
+    })
+})
+
 app.listen(3000, () => console.log("Server is runnint at http://localhost:3000"))
